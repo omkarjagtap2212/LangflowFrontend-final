@@ -11,7 +11,7 @@ const InputContainer = ({
     <div className="input-container">
       <input
         type="text"
-        placeholder="Type your message"
+        placeholder="Type your Query"
         value={inputValue}
         onChange={handleInputChange}
         className="input-field"

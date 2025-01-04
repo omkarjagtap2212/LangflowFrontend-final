@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -9,7 +8,8 @@ export const useChat = () => {
   const [error, setError] = useState("");
   const [darkMode, setDarkMode] = useState(false);
 
-  const MYport = import.meta.env.VITE_PORT;
+  // Get the API URL from environment variables (only the production URL will be used)
+  const apiUrl = import.meta.env.VITE_API_URL; // Using the production URL
 
   const toggleDarkMode = () => {
     setDarkMode((prev) => !prev);
@@ -30,7 +30,7 @@ export const useChat = () => {
     setError("");
 
     try {
-      const { data } = await axios.post(`http://localhost:${MYport}/api/runFlow`, {
+      const { data } = await axios.post(apiUrl, {
         flowIdOrName: "ff2459ad-5125-40e4-acdd-f73cf6243641",
         langflowId: "e101e404-9521-4fd8-9ed3-b54b449537b0",
         inputValue: userMessage.text,

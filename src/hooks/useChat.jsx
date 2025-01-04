@@ -30,7 +30,7 @@ export const useChat = () => {
     setError("");
 
     try {
-      const { data } = await axios.post(`http://localhost:${MYport}/runFlow`, {
+      const { data } = await axios.post(`http://localhost:${MYport}/api/runFlow`, {
         flowIdOrName: "ff2459ad-5125-40e4-acdd-f73cf6243641",
         langflowId: "e101e404-9521-4fd8-9ed3-b54b449537b0",
         inputValue: userMessage.text,

@@ -20,11 +20,11 @@ const Footer = () => {
             </div>
             <div className="member">
               <img src={P2R} alt="Member 2" className="member-image" />
-              <p>Atharv</p>
+              <p>Vaibhav</p>
             </div>
             <div className="member">
               <img src={p1R} alt="Member 3" className="member-image" />
-              <p>Vaibhav</p>
+              <p>Atharv</p>
             </div>
             <div className="member">
               <img src={p4} alt="Member 4" className="member-image" />

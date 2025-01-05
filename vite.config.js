@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  build: {
-    outDir: 'build', // Ensure the build output is directed to the 'build' directory
-  },
   server: {
     proxy: {
-      '/runFlow': 'http://localhost:5000',
+      '/api/v1/socialMedia': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/v1\/socialMedia/, '/api/v1/socialMedia'),
+      },
     },
   },
 });

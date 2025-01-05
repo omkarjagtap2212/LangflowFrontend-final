@@ -1,12 +1,12 @@
 import React from 'react';
-import EELOGO from "../assets/EELOGO.png"
+import LOGOA from "../assets/LOGOA.png"
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-logo">
         {/* Placeholder for the logo */}
-        <img src={EELOGO} alt="Logo" className="logo" />
-        <span className="app-name">ELECTRICAL CODERS</span>
+        <img src={LOGOA} alt="Logo" className="logo" />
+        <span className="app-name">InsightSphere</span>
       </div>
     </div>
   );
